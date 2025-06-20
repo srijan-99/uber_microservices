@@ -1,10 +1,10 @@
 {
-  "name": "uber_microservices",
+  "name": "ride",
   "version": "1.0.0",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js"
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
@@ -12,13 +12,12 @@
   "description": "",
   "dependencies": {
     "amqplib": "^0.10.8",
+    "axios": "^1.10.0",
     "bcrypt": "^6.0.0",
     "cookie-parser": "^1.4.7",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
-    "express-http-proxy": "^2.1.1",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.15.0",
-    "morgan": "^1.10.0"
+    "mongoose": "^8.16.0"
   }
 }

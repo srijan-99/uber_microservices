@@ -3,10 +3,16 @@ const express=require('express');
 const app=express();
 const morgan=require('morgan');
 const dotenv=require('dotenv');
+dotenv.config();
 const connectDb=require('./db/conn');
 const cookieParser=require('cookie-parser');
 
-const userRoutes=require('./routes/user.routes')
+const userRoutes=require('./routes/user.routes');
+const rabbitmq=require('./service/rabbit');
+
+//Connect to RabbitMq
+rabbitmq.connect();
+
 
 dotenv.config();
 
@@ -24,7 +30,7 @@ app.use('/',userRoutes);
 // For testing purpose 
 
 // app.get('/',(req,res)=>{
-//     // res.send(`Welcome the the User Sevice Api`)
+//     // res.send(`Welcome the the User Service Api`)
 //     for(let i=0;i<10000000000;i++){
 
 //     }
